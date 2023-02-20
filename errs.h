@@ -7,7 +7,7 @@
  * DESCRIPTION:
 **/
 
-#include <stdlib.h>
+#include <stdio.h>
 
 #define FILENAME "logs_mkfiles"
 

@@ -7,8 +7,9 @@
  * DESCRIPTION:
 **/ 
 
+#include <stdlib.h>
+
 #include "errs.h"
-#include <stdio.h>
 
 void set_log(errs *err, char *log, char *msg);
 void save_log(errs *err);
@@ -53,7 +54,5 @@ void save_log(errs *err)
         printf("\e[0;30mCould not open %s.\e[0m\n", FILENAME);
         return;
     }
-
-
 }
 
