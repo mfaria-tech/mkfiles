@@ -7,15 +7,14 @@
  * DESCRIPTION:
 **/
 
-#include <getopt.h>
 #include <stdio.h>
 
+#include "mkfiles.h"
+
 int main (int argc,char *argv[])
-{
-    char *opts = "i";
-    
-    char opt = getopt(argc, argv, opts); 
-    if (opt == '?')
+{    
+    char opt = getopt(argc, argv, OPTS); 
+    if (opt == -1)
     {
         return 1;
     }
