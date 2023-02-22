@@ -7,14 +7,10 @@
  * DESCRIPTION:
 **/ 
 
-#include <stdlib.h>
+#include "errs_private.h"
 
-#include "errs.h"
-
-void set_log(errs *err, char *log, char *msg);
-void save_log(errs *err);
-
-int get_err (int code)
+// Get error and storage status
+int get_err(int code)
 {
     errs err;
     
