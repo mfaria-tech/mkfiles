@@ -1,8 +1,8 @@
 /**
  * TITLE: mkfiles.h
- * NAME: Marcus Faria
+ * AUTHOR: Marcus Faria
  * CREATED AT: 20.02.2023
- * UPDATED AT: 20.02.2023
+ * UPDATED AT: 21.02.2023
  *
  * DESCRIPTION:
 **/
@@ -12,4 +12,3 @@
 #include "errs.h"
 
 #define OPTS "i"
-

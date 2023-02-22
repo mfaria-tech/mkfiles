@@ -1,8 +1,8 @@
 /**
  * TITLE: mkfiles.c
- * NAME: Marcus Faria
+ * AUTHOR: Marcus Faria
  * CREATED AT: 17.02.2023
- * UPDATED AT: 17.02.2023
+ * UPDATED AT: 21.02.2023
  *
  * DESCRIPTION:
 **/
@@ -21,4 +21,3 @@ int main (int argc,char *argv[])
 
     return 0;
 }
-
