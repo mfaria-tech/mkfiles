@@ -1,8 +1,8 @@
 /**
  * TITLE: errs.c
- * NAME: Marcus Faria
+ * AUTHOR: Marcus Faria
  * CREATED AT: 19.02.2023
- * UPDATED AT: 19.02.2023
+ * UPDATED AT: 21.02.2023
  *
  * DESCRIPTION:
 **/ 
@@ -19,19 +19,25 @@ int get_err(int code)
         case 1:
             set_log(
                 &err, 
-                "",
-                ""
+                "1",
+                "1"
             );
+
+            printf("OI 1\n");
+            break;
         case 2:
             set_log(
                 &err,
-                "",
-                ""
+                "2",
+                "2"
             );
-        default:
-            err.code = code;
-    }
 
+            printf("OI 2\n");
+            break;
+    }
+    err.code = code;
+    
+    save_log(&err);
     return err.code;
 }
 
@@ -43,6 +49,7 @@ void set_log(errs *err, char *log, char *msg)
     err->logdate = get_localtime();
 }
 
+// save log in file-logs
 void save_log(errs *err)
 {
     char *logs = read_file();
@@ -53,6 +60,13 @@ void save_log(errs *err)
         printf("\e[0;30mCould not open %s.\e[0m\n", FILENAME);
         return;
     }
+
+    fseek(logfile, 0, SEEK_SET);
+    fprintf(logfile, "ERROR :: %i\n", err->code); 
+    fprintf(logfile, "STATUS :: %s\n", err->log);
+    fprintf(logfile, "DESCRIPTION :: %s\n", err->msg);
+    fprintf(logfile, "LOG DATE :: %s\n", err->logdate);
+    
     if (logs != NULL)
     {
         for (int i = 0; logs[i] != '\0'; i++)
