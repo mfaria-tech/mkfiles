@@ -39,11 +39,12 @@ int get_err (int code)
     return err.code;
 }
 
+// set value log to pointer error
 void set_log(errs *err, char *log, char *msg)
 {
     err->log = log;
     err->msg = msg;
-    //err->logdate = ;
+    err->logdate = get_localtime();
 }
 
 void save_log(errs *err)
@@ -96,3 +97,14 @@ char *read_file(void)
     return logs;
 }
 
+// get current clock, return string time
+char *get_localtime(void)
+{
+    struct tm* ptr;
+    time_t t;
+    
+    t = time(NULL);
+    ptr = localtime(&t);
+
+    return asctime(ptr);
+}
