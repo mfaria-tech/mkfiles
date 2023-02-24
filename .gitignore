@@ -46,8 +46,12 @@
 *.mod*
 *.cmd
 .tmp_versions/
-*tests/
 modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Files and directories to test
+*tests/
+*bin/
+logs_error_mkfiles
