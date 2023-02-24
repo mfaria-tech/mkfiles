@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS=	-g \
+CFLAGS=-g \
 	-lm \
 	-O0 \
 	-Qunused-arguments \
@@ -12,18 +12,26 @@ CFLAGS=	-g \
 	-Wno-unused-parameter \
 	-Wno-unused-variable
 EXEC=mkfiles.exe
-SRC= 	mkfiles.c \
+SRC=mkfiles.c \
 	errs.c
-OBJ= $(SRC:.c=.o)
+OBJ=$(SRC:.c=.o)
 
-all: $(OBJ)
-	$(CC) -o $(EXEC) $(OBJ) $(CFLAGS)
+all: binFolder $(EXEC)
 
-mkfiles.o: src/mkfiles.c
-	$(CC) -c $(CFLAGS) src/mkfiles.c -o mkfiles.o
+$(EXEC): $(OBJ)
+	@echo -e "\e[0;34mBuilding binary: $(EXEC)\e[0m"
+	$(CC) -o bin/$(EXEC) bin/*.o $(CFLAGS)
+	@echo -e "\e[0;34mFinished building\e[0m\n"
 
-errs.o: src/errs.c
-	$(CC) -c $(CFLAGS) src/errs.c -o errs.o
+%.o: src/%.c
+	@echo -e "\e[0;34mMake assemble step: $@\e[0m"
+	$(CC) -c $(CFLAGS) $< -o bin/$@
+	@echo ' '
+
+binFolder:
+	@mkdir -p bin
 
 clean:
-	@rm -rf $(OBJ) 
+	@rm -rf bin/$(OBJ)
+
+.PHONY: all clean
