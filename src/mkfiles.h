@@ -8,6 +8,7 @@
 **/
 
 #include <getopt.h>
+#include <stdlib.h>
 
 #include "errs.h"
 
