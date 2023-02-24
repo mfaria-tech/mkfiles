@@ -15,6 +15,7 @@
 
 #define FILENAME "logs_error_mkfiles"
 
+void display_log(errs *err);
 char *read_file(void);
 char *get_localtime(void);
 void set_log(errs *err, char *log, char *msg);
