@@ -18,25 +18,29 @@ int get_err(int code)
     {
         case 1:
             set_log(
-                &err, 
-                "1",
-                "1"
+                &err,
+                "Argument not found",
+                "Use ./mkfiles.exe [OPTION] [SOURCE]"
             );
-
-            printf("OI 1\n");
             break;
         case 2:
             set_log(
-                &err,
-                "2",
-                "2"
+                &err, 
+                "getopt was returned -1",
+                "Option not found. Use \"ie\" for flag"
             );
-
-            printf("OI 2\n");
+            break;
+        case 3:
+            set_log(
+                &err,
+                "",
+                ""
+            );
             break;
     }
     err.code = code;
     
+    display_log(&err);
     save_log(&err);
     return err.code;
 }
@@ -47,6 +51,12 @@ void set_log(errs *err, char *log, char *msg)
     err->log = log;
     err->msg = msg;
     err->logdate = get_localtime();
+}
+
+// display error log
+void display_log(errs *err)
+{
+    printf("\e[1;30m%s\e[0m\n", err->msg);
 }
 
 // save log in file-logs
