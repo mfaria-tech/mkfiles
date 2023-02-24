@@ -12,11 +12,16 @@
 #include "mkfiles.h"
 
 int main (int argc,char *argv[])
-{    
-    char opt = getopt(argc, argv, OPTS); 
-    if (opt == -1)
+{
+    if (argc < 2)
     {
-        return 1;
+        return get_err(ERR_ARGS);
+    }
+
+    char opt = getopt(argc, argv, OPTS); 
+    if (opt == '?')
+    {
+        return get_err(ERR_GETOPT);
     }
 
     return 0;
