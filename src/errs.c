@@ -10,7 +10,7 @@
 #include "errs_private.h"
 
 // Get error and storage status
-int get_err(int code)
+int get_err(const int code)
 {
     errs err;
     
@@ -54,13 +54,13 @@ void set_log(errs *err, char *log, char *msg)
 }
 
 // display error log
-void display_log(errs *err)
+void display_log(const errs *err)
 {
     printf("\e[1;30m%s\e[0m\n", err->msg);
 }
 
 // save log in file-logs
-void save_log(errs *err)
+void save_log(const errs *err)
 {
     char *logs = read_file();
 

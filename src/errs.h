@@ -23,4 +23,4 @@ errs;
 //#define ERR_ 5
 //#define ERR_ 6
 
-int get_err(int code);
+int get_err(const int code);
