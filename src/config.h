@@ -7,6 +7,9 @@
  * DESCRIPTION:
 **/
 
+#ifndef CONFIG_H
+#define CONFIG_H
+
 typedef struct
 {
     char *metadatas;
@@ -18,3 +21,5 @@ typedef struct
 f_config;
 
 #define CONFIG_DIR "~/.mkfiles_config"
+
+#endif // CONFIG_H

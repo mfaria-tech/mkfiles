@@ -7,6 +7,9 @@
  * DESCRIPTION:
 **/
 
+#ifndef ERRS_H
+#define ERRS_H
+
 typedef struct
 {
     int code;
@@ -24,3 +27,5 @@ errs;
 //#define ERR_ 6
 
 int get_err(const int code);
+
+#endif // ERRS_H

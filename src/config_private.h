@@ -7,6 +7,9 @@
  * DESCRIPTION:
 **/
 
+#ifndef CONFIG_PRIVATE_H
+#define CONFIG_PRIVATE_H
+
 #include <sys/stat.h>
 #include <sys/types.h>
 
@@ -15,3 +18,5 @@
 int check_dir(const char *dir);
 int create_config(const char *file, const char *dir);
 int set_config(const char *file, const char *dir);
+
+#endif // CONFIG_PRIVATE_H
