@@ -12,8 +12,10 @@ CFLAGS=-g \
 	-Wno-unused-parameter \
 	-Wno-unused-variable
 EXEC=mkfiles.exe
-SRC=mkfiles.c \
-	errs.c
+SRC=main.c \
+	errs.c \
+	config.c \
+	yml_handler.c
 OBJ=$(SRC:.c=.o)
 
 all: binFolder $(EXEC)
