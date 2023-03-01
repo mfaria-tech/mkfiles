@@ -22,7 +22,7 @@ errs;
 #define ERR_ARGS 1
 #define ERR_GETOPT 2
 #define ERR_OUT_FILE 3
-//#define ERR_ 4
+#define ERR_SET_EXT 4
 //#define ERR_ 5
 //#define ERR_ 6
 

@@ -27,7 +27,7 @@ int get_err(const int code)
             set_log(
                 &err, 
                 "getopt was returned -1",
-                "Option not found. Use \"ie\" for flag"
+                "Option not found."
             );
             break;
         case 3:
@@ -35,6 +35,13 @@ int get_err(const int code)
                 &err,
                 "",
                 ""
+            );
+            break;
+        case 4:
+            set_log(
+                &err,
+                "Argument to create file not found",
+                "Use ./mkfiles.exe -x <SOURCE>"
             );
             break;
     }
