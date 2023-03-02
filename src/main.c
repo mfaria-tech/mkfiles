@@ -47,12 +47,12 @@ int main(int argc, char *argv[])
 
 void show_help(void)
 {
-    printf("\
+    printf("\e[1;30m\
         Use ./mkfiles.exe [OPTION] [SOURCE]\n\
-        -h, --help              List most commonly used commands.\n\
-        -i, --interative        Create file interatively.\n\
-        -x, --set-extension     Set structure to create file.\n\
-    ");
+            -h, --help              List most commonly used commands.\n\
+            -i, --interative        Create file interatively.\n\
+            -x, --set-extension     Set structure to create file.\n\
+        \e[0m\n");
 
     exit(0);
 }
