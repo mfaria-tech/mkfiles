@@ -74,7 +74,7 @@ void save_log(const errs *err)
     FILE *logfile = fopen(FILENAME, "w");
     if (logfile == NULL)
     {
-        printf("\e[0;30mCould not open %s.\e[0m\n", FILENAME);
+        printf("\e[1;30mCould not open %s.\e[0m\n", FILENAME);
         return;
     }
 
