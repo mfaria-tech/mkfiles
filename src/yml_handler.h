@@ -3,8 +3,6 @@
  * AUTHOR: Marcus Faria
  * CREATED AT: 25.02.2023
  * UPDATED AT: 25.02.2023
- *
- * DESCRIPTION:
 **/
 
 #ifndef YML_HANDLER_H

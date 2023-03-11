@@ -3,8 +3,6 @@
  * AUTHOR: Marcus Faria
  * CREATED AT: 21.02.2023
  * UPDATED AT: 21.02.2023
- *
- * DESCRIPTION:
 **/
 
 #ifndef ERRS_PRIVATE_H

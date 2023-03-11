@@ -3,8 +3,6 @@
  * AUTHOR: Marcus Faria
  * CREATED AT: 24.02.2023
  * UPDATED AT: 25.02.2023
- *
- * DESCRIPTION:
 **/
 
 #ifndef CONFIG_PRIVATE_H

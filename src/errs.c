@@ -3,8 +3,6 @@
  * AUTHOR: Marcus Faria
  * CREATED AT: 19.02.2023
  * UPDATED AT: 21.02.2023
- *
- * DESCRIPTION:
 **/ 
 
 #include "errs_private.h"

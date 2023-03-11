@@ -3,8 +3,6 @@
  * AUTHOR: Marcus Faria
  * CREATED AT: 24.02.2023
  * UPDATED AT: 24.02.2023
- *
- * DESCRIPTION:
 **/
 
 #include "config_private.h"
