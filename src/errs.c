@@ -9,6 +9,13 @@
 
 // Get error and storage status
 int get_err(const int code)
+/**
+ * Args:
+ *  code (int) == error code to identify error type
+ *
+ * Return:
+ *  err.code (int) == error code
+**/
 {
     errs err;
     
@@ -52,6 +59,15 @@ int get_err(const int code)
 
 // set value log to pointer error
 void set_log(errs *err, char *log, char *msg)
+/**
+ * Args:
+ *  err (struct errs *) == pointer error log to update 
+ *  log (char *) == string type log information
+ *  msg (char *) == string message log
+ *
+ * Return:
+ *  Non return
+**/
 {
     err->log = log;
     err->msg = msg;
@@ -60,12 +76,26 @@ void set_log(errs *err, char *log, char *msg)
 
 // display error log
 void display_log(const errs *err)
+/**
+ * Args:
+ *  err (struct errs *) == error log
+ *
+ * Return:
+ *  Non return
+**/
 {
     printf("\e[1;30m%s\e[0m\n", err->msg);
 }
 
 // save log in file-logs
-void save_log(const errs *err)
+void save_log(const errs *err)]
+/**
+ * Args:
+ *  err (struct errs *) == error log
+ *
+ * Return:
+ *  Non return
+**/
 {
     char *logs = read_file();
 
@@ -95,6 +125,13 @@ void save_log(const errs *err)
 
 // read file with exist
 char *read_file(void)
+/**
+ * Args:
+ *  Non args
+ *
+ * Return:
+ *  logs (char *) == logs in file
+**/
 {
     FILE *curfile = fopen(FILENAME, "r");
     if (curfile == NULL)
@@ -124,6 +161,13 @@ char *read_file(void)
 
 // get current clock, return string time
 char *get_localtime(void)
+/**
+ * Args:
+ *  Non args
+ *
+ * Return:
+ *  asctime (char *) == current time
+**/
 {
     struct tm* ptr;
     time_t t;
