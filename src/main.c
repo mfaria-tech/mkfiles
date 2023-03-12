@@ -11,6 +11,14 @@
 #include "main.h"
 
 int main(int argc, char *argv[])
+/**
+ * Args:
+ *  argc (int) == total arguments geted in prompt
+ *  argv (char * []) == list of arguments geted in prompt
+ *
+ * Return:
+ *  status code
+**/
 {
     if (argc < 2)
     {
@@ -44,6 +52,13 @@ int main(int argc, char *argv[])
 }
 
 void show_help(void)
+/**
+ * Args:
+ *  Non args
+ *
+ * Return:
+ *  Non return
+**/
 {
     printf("\e[1;30m\
         Use ./mkfiles.exe [OPTION] [SOURCE]\n\
