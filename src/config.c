@@ -49,7 +49,7 @@ int check_dir(const char *dir)
     struct stat sb;
     if (stat(dir, &sb) == -1)
     {
-        mkdir(dir, 0777);
+        mkdir(dir, 0754);
         return 1;
     }
 
